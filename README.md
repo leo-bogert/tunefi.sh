@@ -7,40 +7,55 @@ Suitable for satisfying iTunes users who cannot playback FLAC because Apple deci
 Installation
 =============
 
-# download code signing key of leo:
-gpg --recv-key 15173ECBBC720C9EF4205805B26BE43E4B5EAD69
+Download code signing key of the author:
 
-# install dependancy: ALAC encoder
-apt-get install libav-tools
+    gpg --recv-key 15173ECBBC720C9EF4205805B26BE43E4B5EAD69
 
-# install dependancy: shell-tools:
-git clone https://github.com/leo-bogert/shell-tools ~/.bin/shell-tools
-cd ~/.bin/shell-tools
-# now we find out what the latest version is:
-git tag --list
-# we verify the gnupg tag of that version and check out that version:
-git verify-tag <latest version tag>
-git checkout <latest version tag>
+Install ALAC encoder:
 
-# install tunefi.sh
-git clone https://github.com/leo-bogert/tunefi.sh ~/.bin/tunefi.sh
-cd ~/.bin/tunefi.sh
-# now we find out what the latest version is:
-git tag --list
-# we verify the gnupg tag of that version and check out that version:
-git verify-tag <latest version tag>
-git checkout <latest version tag>
+    apt-get install libav-tools
 
-# add to $PATH so you can execute it from anywhere:
-cp -ai .bashrc .bashrc.default
-nano .bashrc
+Install dependancy shell-tools:
+
+    git clone https://github.com/leo-bogert/shell-tools ~/.bin/shell-tools
+    cd ~/.bin/shell-tools
+
+Find out what the latest version is:
+
+    git tag --list
+
+Verify the GnuPG signature of that version and check it out:
+
+    git verify-tag <latest version tag>
+    git checkout <latest version tag>
+
+Install tunefi.sh
+
+    git clone https://github.com/leo-bogert/tunefi.sh ~/.bin/tunefi.sh
+    cd ~/.bin/tunefi.sh
+
+Find out what the latest version is:
+
+    git tag --list
+
+
+Verify the GnuPG signature of that version and check it out:
+
+    git verify-tag <latest version tag>
+    git checkout <latest version tag>
+
+
+Add lib-bash-leo to $PATH so tunefi.sh works. Also add tunefi.sh to $PATH so it works everywhere:
+
+    cp -ai .bashrc .bashrc.default
+    nano .bashrc
 		# append to end of file:
 		PATH="$PATH:$HOME/.bin/shell-tools:$HOME/.bin/tunefi.sh"
 
 Usage
 =====
 
-tunefi.sh <input directory> <output directory>
+    tunefi.sh <input directory> <output directory>
 
 Output
 ======

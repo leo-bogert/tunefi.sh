@@ -45,7 +45,7 @@ Verify the GnuPG signature of that version and check it out:
     git checkout <latest version tag>
 
 
-Add lib-bash-leo to $PATH so tunefi.sh works. Also add tunefi.sh to $PATH so it works everywhere:
+Add shell-tools to $PATH so tunefi.sh works. Also add tunefi.sh to $PATH so it works everywhere:
 
     cp -ai .bashrc .bashrc.default
     nano .bashrc

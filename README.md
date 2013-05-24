@@ -66,7 +66,7 @@ Leo Bogert <github@leo.bogert.de>
 Version
 =======
 
-1
+2
 
 Donations
 =========

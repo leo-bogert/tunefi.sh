@@ -50,6 +50,7 @@ Each folder typically represents a music album.
 
 The following files/directories are copied over from the input directory if they exist:
 - Artwork
+- Cover.jpg
 - Proof of Quality
 - README.txt
 - TODO.txt

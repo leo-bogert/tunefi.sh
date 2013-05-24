@@ -42,7 +42,7 @@ main() {
 		set_working_directory_or_die "$release"
 		for otherfile in * ; do
 			case "$otherfile" in
-				'Artwork'|'Proof of Quality'|'README.txt'|'TODO.txt')
+				'Artwork'|'Cover.jpg'|'Proof of Quality'|'README.txt'|'TODO.txt')
 					stdout "Copying $otherfile to output dir..."
 					# Don't preserve ownership so this works on top of CIFS mounts. Don't preserve mode because the existing mode might be insecure with the default ownership.
 					cp -ai --no-preserve=mode,ownership -- "$otherfile" "$OUTPUT_DIR_ABSOLUTE/$release_name"
